@@ -13,6 +13,10 @@
         "axios": "^0.21",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
-        "postcss": "^8.1.14"
+        "postcss": "^8.1.14",
+        "video.js": "^7.13.3"
+    },
+    "dependencies": {
+        "plyr": "^3.6.8"
     }
 }

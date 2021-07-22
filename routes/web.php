@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', [\App\Http\Controllers\Broadcaster\IndexController::class, 'index']);
+
+Route::get('/', [\App\Http\Controllers\Broadcaster\IndexController::class, 'index'])->name('index.navigation.status');
+Route::get('/devices', [\App\Http\Controllers\Broadcaster\IndexController::class, 'devices'])->name('index.navigation.devices');
+
