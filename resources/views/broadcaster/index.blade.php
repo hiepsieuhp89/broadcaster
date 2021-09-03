@@ -13,12 +13,6 @@
         <div class="col-xl-7">
           <div class="card" style="height: calc(100% - 25px);">
             <div class="card-header bg-primary py-3 text-white">
-              <div class="card-widgets">
-                <a href="javascript:;" data-toggle="reload"><i class="mdi mdi-refresh"></i></a>
-                <a data-toggle="collapse" href="#cardCamera" role="button" aria-expanded="false"
-                  aria-controls="cardCamera"><i class="mdi mdi-minus"></i></a>
-                <a href="#camera" data-toggle="remove"><i class="mdi mdi-close"></i></a>
-              </div>
               <h5 class="header-title mb-0 text-white">Camera chính</h5>
             </div>
             <div id="cardCamera" class="collapse show h-100">
@@ -54,14 +48,8 @@
             <div class="row">
                 <div class="col-xl-12">
                   <div class="card">
-                    <div class="card-header py-3 bg-transparent">
-                      <div class="card-widgets">
-                        <a href="javascript:;" data-toggle="reload"><i class="mdi mdi-refresh"></i></a>
-                        <a data-toggle="collapse" href="#cardStatus" role="button" aria-expanded="false"
-                          aria-controls="cardStatus"><i class="mdi mdi-minus"></i></a>
-                        <a href="#status" data-toggle="remove"><i class="mdi mdi-close"></i></a>
-                      </div>
-                      <h5 class="header-title mb-0">Giám sát</h5>
+                    <div class="card-header bg-primary py-3 text-white">
+                      <h5 class="header-title mb-0 text-white">Giám sát</h5>
                     </div>
                     <div id="cardStatus" class="collapse show">
                       <div class="card-body">
@@ -108,7 +96,7 @@
                                         <div class="card-body">
                                             <div class="tile-stats">
                                                 <div class="status">
-                                                    <h3>không</h3>
+                                                    <h3 class="text-no-wrap">Không</h3>
                                                     <p>Khói</p>
                                                 </div>
                                                 <span class="compositeline"></span>
@@ -121,7 +109,7 @@
                                         <div class="card-body">
                                             <div class="tile-stats">
                                                 <div class="status">
-                                                    <h3>Không</h3>
+                                                    <h3 class="text-no-wrap">Không</h3>
                                                     <p>Chìm nước</p>
                                                 </div>
                                                 <span class="compositeline"></span>
@@ -134,7 +122,7 @@
                                         <div class="card-body">
                                             <div class="tile-stats">
                                                 <div class="status">
-                                                    <h3>Không</h3>
+                                                    <h3 class="text-no-wrap">Không</h3>
                                                     <p>Động đất</p>
                                                 </div>
                                                 <span class="compositeline"></span>
@@ -164,4 +152,10 @@
 <!-- ============================================================== -->
 <!-- End Page content -->
 <!-- ============================================================== -->
+@endsection
+
+@section('script')
+
+@include('broadcaster.templates.script')
+
 @endsection

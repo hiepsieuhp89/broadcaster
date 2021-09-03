@@ -22,58 +22,28 @@
                       <div class="notify-icon">
                           <i class="mdi mdi-comment-account-outline text-info"></i>
                       </div>
-                      <p class="notify-details">Caleb Flakelar commented on Admin
+                      <p class="notify-details">Tin nhắn 1
                           <small class="noti-time">1 min ago</small>
                       </p>
                   </a>
 
                   <!-- item-->
                   <a href="javascript:void(0);" class="dropdown-item notify-item">
-                      <div class="notify-icon text-success">
-                          <i class="mdi mdi-account-plus text-primary"></i>
-                      </div>
-                      <p class="notify-details">New user registered.
-                          <small class="noti-time">5 hours ago</small>
-                      </p>
-                  </a>
-
-                  <!-- item-->
-                  <a href="javascript:void(0);" class="dropdown-item notify-item">
                       <div class="notify-icon text-danger">
-                          <i class="mdi mdi-heart text-danger"></i>
+                          <i class=" ion ion-md-notifications text-primary"></i>
                       </div>
-                      <p class="notify-details">Carlos Crouch liked
+                      <p class="notify-details">Thông báo 1
                           <small class="noti-time">3 days ago</small>
                       </p>
                   </a>
 
                   <!-- item-->
                   <a href="javascript:void(0);" class="dropdown-item notify-item">
-                      <div class="notify-icon text-warning">
-                          <i class="mdi mdi-comment-account-outline text-primary"></i>
-                      </div>
-                      <p class="notify-details">Caleb Flakelar commented on Admi
-                          <small class="noti-time">4 days ago</small>
-                      </p>
-                  </a>
-
-                  <!-- item-->
-                  <a href="javascript:void(0);" class="dropdown-item notify-item">
                       <div class="notify-icon text-purple">
-                          <i class="mdi mdi-account-plus text-danger"></i>
+                          <i class="ion ion-md-warning text-warning"></i>
                       </div>
-                      <p class="notify-details">New user registered.
+                      <p class="notify-details">Cảnh báo 1
                           <small class="noti-time">7 days ago</small>
-                      </p>
-                  </a>
-
-                   <!-- item-->
-                   <a href="javascript:void(0);" class="dropdown-item notify-item">
-                      <div class="notify-icon text-danger">
-                          <i class="mdi mdi-heart text-danger"></i>
-                      </div>
-                      <p class="notify-details">Carlos Crouch liked <b>Admin</b>.
-                          <small class="noti-time">Carlos Crouch liked</small>
                       </p>
                   </a>
               </div>
@@ -83,20 +53,20 @@
           </div>
       </li>
 
-      <!-- <li class="dropdown notification-list">
+      <li class="dropdown notification-list">
           <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-              <img src="assets\images\users\avatar-1.jpg" alt="user-image" class="rounded-circle">
+              {{-- <img src="" alt="user-image" class="rounded-circle"> --}}
               <span class="pro-user-name ml-1">
-                  Thompson   <i class="mdi mdi-chevron-down"></i>
+                  {{ Auth::User()->name }}<i class="mdi mdi-chevron-down"></i>
               </span>
           </a>
           <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
-              <a href="javascript:void(0);" class="dropdown-item notify-item">
+              <a href="{{ route('auth.logout') }}" class="dropdown-item notify-item">
                   <i class="mdi mdi-logout-variant"></i>
-                  <span>Logout</span>
+                  <span>Đăng xuất</span>
               </a>
           </div>
-      </li> -->
+      </li>
 
       <li class="dropdown notification-list">
           <a href="javascript:void(0);" class="nav-link right-bar-toggle waves-effect">
@@ -124,7 +94,7 @@
         <span class="logo-lg">
             {{-- <img src="images\smart-home.png" alt="" height="18"> --}}
             <!-- <span class="logo-lg-text-dark">Velonic</span> -->
-            <span class="text-white text-uppercase logo-lg-text-dark">Broadcaster</span>
+            <span class="text-white text-uppercase logo-lg-text-dark">Home Repeater</span>
         </span>
           <span class="logo-sm">
               <!-- <span class="logo-lg-text-dark">V</span> -->
@@ -147,7 +117,7 @@
           <form class="app-search">
               <div class="app-search-box">
                   <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Search...">
+                      <input type="text" class="form-control" placeholder="Tìm kiếm">
                       <div class="input-group-append">
                           <button class="btn" type="submit">
                               <i class="fas fa-search"></i>
@@ -173,35 +143,21 @@
   <li>
       <a href="{{ route('index.navigation.status') }}" class="waves-effect @if($navigation == 'status' || $navigation == '') active @endif">
           <i class="ion-md-speedometer"></i>
-          <span> Giám sát </span>
-          <span class="badge badge-info badge-pill float-right"> 3 </span>
+          <span> Tổng quan </span>
+          <span class="badge badge-danger badge-pill float-right"> 3 </span>
       </a>
   </li>
-
   <li>
-      <a href="{{ route('index.navigation.devices') }}" class="waves-effect">
+    <a href="{{ route('index.navigation.analyze') }}" class="waves-effect @if($navigation == 'analyze') active @endif">
+        <i class="ion ion-md-analytics"></i>
+        <span> Giám sát </span>
+    </a>
+  </li>
+  <li>
+    <a href="{{ route('index.navigation.devices') }}" class="waves-effect">
           <i class="mdi mdi-remote-tv"></i>
           <span> Quản lý thiết bị </span>
       </a>
-
-      {{-- <ul class="nav-second-level nav" aria-expanded="false">
-          <li>
-              <a href="javascript: void(0);">Level 1.1</a>
-          </li>
-          <li>
-              <a href="javascript: void(0);" aria-expanded="false">Level 1.2
-                      <span class="menu-arrow"></span>
-                  </a>
-              <ul class="nav-third-level nav" aria-expanded="false">
-                  <li>
-                      <a href="javascript: void(0);">Level 2.1</a>
-                  </li>
-                  <li>
-                      <a href="javascript: void(0);">Level 2.2</a>
-                  </li>
-              </ul>
-          </li>
-      </ul> --}}
   </li>
 </ul>
 

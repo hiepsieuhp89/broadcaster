@@ -30,13 +30,13 @@
 <!-- chart line init js -->
 <script src="assets\js\pages\sparkline.init.js"></script>
 
+<!-- Toastr js -->
+<script src="assets\libs\toastr\toastr.min.js"></script>
+
 <!-- App js -->
 <script src="assets\js\app.min.js"></script>
 
 <!-- Video js -->
 <script src="js/video.min.js"></script>
 
-<script>
-  // var outborder = $('.outborder').width();
-  // $('.outborder').css({'height':outborder+'px'});
-</script>
+

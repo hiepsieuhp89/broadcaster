@@ -17,11 +17,10 @@
                 <a href="javascript:;" data-toggle="reload"><i class="mdi mdi-refresh"></i></a>
                 <a data-toggle="collapse" href="#cardDevices" role="button" aria-expanded="false"
                   aria-controls="cardDevices"><i class="mdi mdi-minus"></i></a>
-                <a href="#devices" data-toggle="remove"><i class="mdi mdi-close"></i></a>
               </div>
               <h5 class="header-title mb-0 text-white">Danh sách thiết bị</h5>
             </div>
-            <div id="cardDevices" class="collapse show h-100">
+            <div id="cardDevices" class="collapse show">
               <div class="card-body h-100">
                 <div class="row h-100">
                   <div class="col-md-3 col-sm-6">
@@ -103,4 +102,9 @@
 <!-- ============================================================== -->
 <!-- End Page content -->
 <!-- ============================================================== -->
+@endsection
+@section('script')
+
+@include('broadcaster.templates.script')
+
 @endsection

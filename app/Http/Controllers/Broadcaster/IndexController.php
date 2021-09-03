@@ -17,4 +17,9 @@ class IndexController extends Controller
             'navigation' => 'devices'
         ]);
     }
+    public function analyze(){
+        return view('broadcaster.analyze',[
+            'navigation' => 'analyze'
+        ]);
+    }
 }

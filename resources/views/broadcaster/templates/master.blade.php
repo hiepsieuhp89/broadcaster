@@ -29,38 +29,22 @@
       <a href="javascript:void(0);" class="right-bar-toggle float-right">
         <i class="mdi mdi-close"></i>
       </a>
-      <h4 class="font-17 m-0 text-white">Theme Customizer</h4>
+      <h4 class="font-17 m-0 text-white">Cài đặt</h4>
     </div>
     <div class="slimscroll-menu">
 
       <div class="p-4">
         <div class="alert alert-warning" role="alert">
-          <strong>Customize </strong> the overall color scheme, layout, etc.
-        </div>
-        <div class="mb-2">
-          <img src="assets\images\layouts\light.png" class="img-fluid img-thumbnail" alt="">
+          <strong>Chỉnh tông màu </strong>
         </div>
         <div class="custom-control custom-switch mb-3">
           <input type="checkbox" class="custom-control-input theme-choice" id="light-mode-switch" checked="">
-          <label class="custom-control-label" for="light-mode-switch">Light Mode</label>
-        </div>
-
-        <div class="mb-2">
-          <img src="assets\images\layouts\dark.png" class="img-fluid img-thumbnail" alt="">
+          <label class="custom-control-label" for="light-mode-switch">Sáng</label>
         </div>
         <div class="custom-control custom-switch mb-3">
           <input type="checkbox" class="custom-control-input theme-choice" id="dark-mode-switch"
             data-bsstyle="assets/css/bootstrap-dark.min.css" data-appstyle="assets/css/app-dark.min.css">
-          <label class="custom-control-label" for="dark-mode-switch">Dark Mode</label>
-        </div>
-
-        <div class="mb-2">
-          <img src="assets\images\layouts\rtl.png" class="img-fluid img-thumbnail" alt="">
-        </div>
-        <div class="custom-control custom-switch mb-5">
-          <input type="checkbox" class="custom-control-input theme-choice" id="rtl-mode-switch"
-            data-appstyle="assets/css/app-rtl.min.css">
-          <label class="custom-control-label" for="rtl-mode-switch">RTL Mode</label>
+          <label class="custom-control-label" for="dark-mode-switch">Tối</label>
         </div>
 
       </div>
@@ -69,7 +53,33 @@
   <!-- /Right-bar -->
   <!-- Right bar overlay-->
   <div class="rightbar-overlay"></div>
-    @include('broadcaster.templates.script')
-</body>
+    @yield('script')
 
+  <script>
+    toastr.options = {
+      "closeButton": true,
+      "debug": false,
+      "newestOnTop": false,
+      "progressBar": true,
+      "positionClass": "toast-bottom-right",
+      "preventDuplicates": false,
+      "onclick": null,
+      "showDuration": "300",
+      "hideDuration": "1000",
+      "timeOut": "5000",
+      "extendedTimeOut": "1000",
+      "showEasing": "swing",
+      "hideEasing": "linear",
+      "showMethod": "fadeIn",
+      "hideMethod": "fadeOut"
+    }
+    @if(session('success'))
+      toastr["success"]("{{ session('success') }}");
+    @endif
+    @if(session('warning'))
+      toastr["warning"]("{{ session('warning') }}");
+    @endif
+    
+  </script>
+</body>
 </html>
