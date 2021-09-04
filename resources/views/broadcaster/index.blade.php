@@ -18,24 +18,8 @@
             <div id="cardCamera" class="collapse show h-100">
               <div class="card-body h-100">
                 <div class="row h-100">
-                  <div class="col-md-12">
-                    <video
-                      style="min-height: 320px;max-height:400px;"
-                      class="video-js h-100 w-100"
-                      controls
-                      preload="auto"
-                      poster="MY_VIDEO_POSTER.jpg"
-                      data-setup="{}"
-                    >
-                      <source src="https://streaming1.vov.vn:8443/audio/vovvn1_vov1.stream_aac/playlist.m3u8" type="application/x-mpegURL" />
-                      <p class="vjs-no-js">
-                        To view this video please enable JavaScript, and consider upgrading to a
-                        web browser that
-                        <a href="https://videojs.com/html5-video-support/" target="_blank"
-                          >supports HTML5 video</a
-                        >
-                      </p>
-                    </video>
+                  <div class="col-md-12" id="map" style="min-height: 320px;">
+                    
                   </div>
                 </div>
               </div>
