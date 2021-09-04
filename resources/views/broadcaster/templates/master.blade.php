@@ -3,7 +3,7 @@
 <head>
   <base href="{{ asset('') }}">
   <meta charset="utf-8">
-  <title>Quản lý nhà trạm</title>
+  <title>Home Repeater</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta content="Quản lý nhà trạm từ xa" name="description">
   <meta content="Haedap" name="author">
@@ -56,6 +56,30 @@
     @yield('script')
 
   <script>
+    
+    var notification_count = 0;
+
+    $(document).on('notify',function(e,type,content){
+
+      notification_count += 1;
+
+      $('[data-type="'+type+'"]').html();
+
+      $('head title').html('('+notification_count+') | Home Repeater');
+      
+
+      const audio = new Audio('sounds/'+type+'.mp3');
+      audio.play();
+
+    })
+
+    $('button[data-toggle="notify"]').on('click',function(){
+
+      $type = $(this).attr('data-type');
+      $content = $(this).attr('data-content');
+      $(document).trigger('notify',[$type,$content]);
+
+    })
     toastr.options = {
       "closeButton": true,
       "debug": false,

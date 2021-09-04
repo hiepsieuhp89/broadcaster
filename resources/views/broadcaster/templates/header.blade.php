@@ -1,6 +1,11 @@
 <!-- Topbar Start -->
 <div class="navbar-custom">
   <ul class="list-unstyled topnav-menu float-right mb-0">
+    <li class="dropdown notification-list">
+        <button class="btn btn-primary" data-toggle="notify" data-type="notification" content="Chú ý backup dữ liệu định kì">
+            Trigger thông báo
+        </button>
+    </li>
       <li class="dropdown notification-list">
           <a class="nav-link dropdown-toggle  waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
               <i class="mdi mdi-bell-outline noti-icon"></i>
