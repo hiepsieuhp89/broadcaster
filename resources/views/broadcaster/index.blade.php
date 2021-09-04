@@ -13,9 +13,9 @@
         <div class="col-xl-7">
           <div class="card" style="height: calc(100% - 25px);">
             <div class="card-header bg-primary py-3 text-white">
-              <h5 class="header-title mb-0 text-white">Camera chính</h5>
+              <h5 class="header-title mb-0 text-white">Bản đồ</h5>
             </div>
-            <div id="cardCamera" class="collapse show h-100">
+            <div id="cardMap" class="collapse show h-100">
               <div class="card-body h-100">
                 <div class="row h-100">
                   <div class="col-md-12" id="map" style="min-height: 320px;">
