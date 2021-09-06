@@ -25,6 +25,7 @@
         url(images/main-background.png);
         background-size: cover;
         background-position: top;
+        
       ">
 
         <div class="account-pages my-5">
