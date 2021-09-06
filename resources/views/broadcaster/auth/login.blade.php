@@ -53,9 +53,18 @@
                                             <div class="alert alert-danger">{{ $message }}</div>
                                         @enderror
                                     </div>
-                                    @error('all')
-                                      <div class="alert alert-danger">{{ $message }}</div>
+                                    <div class="g-recaptcha" data-sitekey="{{ env('GOOGLE_RECAPTCHA_KEY') }}" style="
+                                        display: flex;
+                                        justify-content: center;"></div>
+
+                                    @error('g-recaptcha-response')
+                                        <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
+
+                                    @error('all')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                        
 
                                     {{-- <div class="form-group mb-4">
                                         <div class="checkbox checkbox-success">

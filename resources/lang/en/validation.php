@@ -94,11 +94,14 @@ return [
     'multiple_of' => 'The :attribute must be a multiple of :value.',
     'not_in' => 'The selected :attribute is invalid.',
     'not_regex' => 'The :attribute format is invalid.',
-    'numeric' => 'The :attribute must be a number.',
+    'numeric' => 'Dữ liệu :attribute phải là dạng chữ số.',
     'password' => 'The password is incorrect.',
     'present' => 'The :attribute field must be present.',
+
+    'recaptcha' => 'Cần xác minh bạn không phải người máy',
+
     'regex' => 'The :attribute format is invalid.',
-    'required' => 'The :attribute field is required.',
+    'required' => 'Cần nhập :attribute',
     'required_if' => 'The :attribute field is required when :other is :value.',
     'required_unless' => 'The :attribute field is required unless :other is in :values.',
     'required_with' => 'The :attribute field is required when :values is present.',

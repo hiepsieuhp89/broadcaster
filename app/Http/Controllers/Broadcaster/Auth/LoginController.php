@@ -12,11 +12,20 @@ class LoginController extends Controller
         return view('broadcaster.auth.login');
     }
     public function post(Request $req){
+        
+        $req->validate(
+            [
+                'username' => ['required'],
+                'password' => ['required'],
+                'g-recaptcha-response' => ['required','recaptcha'],
+            ],[
+                'g-recaptcha-response.required'=>'Cần xác minh bạn không phải người máy'
+            ]);
 
-        $credentials = $req->validate([
-            'username' => ['required'],
-            'password' => ['required'],
-        ]);
+        $credentials = [
+            'username' => ($req->all())['username'],
+            'password' => ($req->all())['password'],
+        ];
 
         if (Auth::attempt($credentials)) {
 
