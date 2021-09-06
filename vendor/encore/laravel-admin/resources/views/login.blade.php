@@ -52,6 +52,7 @@
         ),url('{{ env('APP_URL').'/images/main-background.png' }}');
         background-size: cover;
         background-position: top;
+        
     }
   </style>
 
