@@ -29,7 +29,12 @@ return [
     */
 
     'disks' => [
-
+        'admin' => [
+            'driver' => 'local',
+            'root' => public_path('files/admin'),
+            'url' => env('APP_URL').'/files/admin',
+            'visibility' => 'public',
+        ],
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app'),

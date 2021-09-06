@@ -1,4 +1,4 @@
-.outborder{
+/* .outborder{
   position: relative;
   margin: auto;
   border-radius: 120px;
@@ -36,6 +36,7 @@
   left: 50%;right: 0;top:50%;bottom:0;
   transform: translate(-50%,-50%);
 } */
+/*
 .outborder.noconnect{
   background-color: red;
 }
@@ -47,5 +48,8 @@
 }
 #sidebar-menu>ul>li>a.active,#sidebar-menu>ul>li>a:active, #sidebar-menu>ul>li>a:focus, #sidebar-menu>ul>li>a:hover {
   color: #d9d200;
-}
+} */
 
+.skin-blue-light .main-header .navbar,.skin-blue-light .main-header .logo,.login-box{
+  background-color: #0061AF !important;
+}

@@ -99,6 +99,10 @@ return [
     'present' => 'The :attribute field must be present.',
 
     'recaptcha' => 'Cần xác minh bạn không phải người máy',
+    'captcha'    => 'Cần xác minh bạn không phải người máy',
+    'attributes' => [
+        'captcha' => 'captcha',
+    ],
 
     'regex' => 'The :attribute format is invalid.',
     'required' => 'Cần nhập :attribute',
