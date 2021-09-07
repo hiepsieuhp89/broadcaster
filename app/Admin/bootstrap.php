@@ -22,6 +22,7 @@ Use Encore\Admin\Admin;
 
 Encore\Admin\Form::forget(['map', 'editor']);
 
+Admin::favicon(env('APP_URL').'/images/smart-home.png');
 Admin::css('css/style.css');
 Admin::js('js/script.js');
 

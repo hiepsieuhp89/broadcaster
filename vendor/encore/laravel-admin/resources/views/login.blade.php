@@ -9,6 +9,8 @@
   
   @if(!is_null($favicon = Admin::favicon()))
   <link rel="shortcut icon" href="{{$favicon}}">
+  @else 
+  <link rel="shortcut icon" href="images/smart-home.png">
   @endif
   <!-- Bootstrap 3.3.5 -->
   <link rel="stylesheet" href="{{ admin_asset("vendor/laravel-admin/AdminLTE/bootstrap/css/bootstrap.min.css") }}">
