@@ -86,7 +86,7 @@
       </div>
       <div class="form-group has-feedback {!! !$errors->has('password') ?: 'has-error' !!}">
 
-        <label for="password">{{ trans('admin.password') }}</label>
+         <label for="password">{{ trans('admin.password') }}</label>
 
         @if($errors->has('password'))
           @foreach($errors->get('password') as $message)
