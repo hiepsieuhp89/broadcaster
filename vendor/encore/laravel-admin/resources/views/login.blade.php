@@ -74,7 +74,7 @@
 
     <form action="{{ admin_url('auth/login') }}" method="post">
       <div class="form-group has-feedback {!! !$errors->has('username') ?: 'has-error' !!}">
-         <label for="username">{{ trans('admin.username') }}</label>
+        <label for="username">{{ trans('admin.username') }}</label>
         @if($errors->has('username'))
           @foreach($errors->get('username') as $message)
             <label class="control-label" for="inputError"><i class="fa fa-times-circle-o"></i>{{$message}}</label><br>
