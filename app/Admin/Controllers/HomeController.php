@@ -13,8 +13,18 @@ class HomeController extends Controller
     public function index(Content $content)
     {
         return $content
-            ->title('Dashboard')
-            ->description('Description...');
+            ->title('Tổng quan')
+            ->row(function (Row $row) {
+
+                $row->column(8, function (Column $column) {
+                    $column->append(view('homerepeater.elements.map'));
+                });
+
+                $row->column(4, function (Column $column) {
+                    $column->append(view('homerepeater.elements.alert'));
+                });
+            });
+            
             // ->row(Dashboard::title())
             // ->row(function (Row $row) {
 
