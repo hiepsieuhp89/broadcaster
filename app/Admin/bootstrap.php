@@ -25,6 +25,7 @@ Encore\Admin\Form::forget(['map', 'editor']);
 Admin::favicon(env('APP_URL').'/images/smart-home.png');
 Admin::css('css/style.css');
 Admin::js('js/script.js');
+Admin::js('https://www.google.com/recaptcha/api.js');
 Admin::js("https://maps.googleapis.com/maps/api/js?key=".env('GOOGLE_MAP_API_KEY')."&callback=initMap");
 
 

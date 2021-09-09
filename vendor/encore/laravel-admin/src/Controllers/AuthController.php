@@ -68,6 +68,10 @@ class AuthController extends Controller
         return Validator::make($data, [
             $this->username()   => 'required',
             'password'          => 'required',
+            'g-recaptcha-response' => 'required|recaptcha'
+        ],[
+            'g-recaptcha-response.required'=>' Cần xác minh bạn không phải người máy',
+            'g-recaptcha-response.recaptcha'=>' Cần xác minh bạn không phải người máy'
         ]);
     }
 

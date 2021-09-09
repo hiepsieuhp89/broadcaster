@@ -99,6 +99,18 @@
         <input type="password" id="password" class="form-control" placeholder="{{ trans('admin.password') }}" name="password">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
+      <div class="form-group has-feedback {!! !$errors->has('g-recaptcha-response') ?: 'has-error' !!}">
+
+       @if($errors->has('g-recaptcha-response'))
+         @foreach($errors->get('g-recaptcha-response') as $message)
+           <label class="control-label" for="inputError"><i class="fa fa-times-circle-o"></i>{{$message}}</label><br>
+         @endforeach
+       @endif
+
+       <div class="g-recaptcha" data-sitekey="{{ env('GOOGLE_RECAPTCHA_KEY') }}" style="
+                                        display: flex;
+                                        justify-content: center;"></div>
+     </div>
       <div class="row">
         <div class="col-xs-8">
           @if(config('admin.auth.remember'))
@@ -130,6 +142,7 @@
 <script src="{{ admin_asset("vendor/laravel-admin/AdminLTE/bootstrap/js/bootstrap.min.js")}}"></script>
 <!-- iCheck -->
 <script src="{{ admin_asset("vendor/laravel-admin/AdminLTE/plugins/iCheck/icheck.min.js")}}"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script>
   $(function () {
     $('input').iCheck({
